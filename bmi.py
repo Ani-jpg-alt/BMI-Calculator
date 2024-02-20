@@ -1,9 +1,9 @@
 def calculate_bmi(weight, height):
     """
-    Calculate BMI (Body Mass Index) using weight in kilograms and height in meters.
-    Formula: BMI = weight (kg) / (height (m) ** 2)
+    Calculate BMI (Body Mass Index) using weight in kilograms and height in centimeters.
+    Formula: BMI = weight (kg) / ((height (cm) / 100) ** 2)
     """
-    bmi = weight / (height ** 2)
+    bmi = weight / ((height / 100) ** 2)
     return bmi
 
 def interpret_bmi(bmi):
@@ -23,8 +23,8 @@ def main():
     # Input weight in kilograms
     weight = float(input("Enter your weight in kilograms: "))
 
-    # Input height in meters
-    height = float(input("Enter your height in meters: "))
+    # Input height in centimeters
+    height = float(input("Enter your height in centimeters: "))
 
     # Calculate BMI
     bmi = calculate_bmi(weight, height)
